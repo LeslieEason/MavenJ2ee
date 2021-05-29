@@ -1,9 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script src="jquery-3.4.1.min.js"></script>
+    <script src="jquery-3.4.1.js"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>用AJAX以JSON方式提交数据</title>
+</head>
+    <body>
+    <form >
+        名称：<input type="text" id="name"/><br/>
+        血量：<input type="text" id="hp"/><br/>
+        <input type="button" value="提交" id="sender">
+    </form>
+    <div id="messageDiv"></div>
+
     <script>
         $('#sender').click(function(){
             var name=document.getElementById('name').value;
@@ -18,13 +27,5 @@
                 });
         });
     </script>
-</head>
-    <body>
-    <form >
-        名称：<input type="text" id="name"/><br/>
-        血量：<input type="text" id="hp"/><br/>
-        <input type="button" value="提交" id="sender">
-    </form>
-    <div id="messageDiv"></div>
     </body>
 </html>

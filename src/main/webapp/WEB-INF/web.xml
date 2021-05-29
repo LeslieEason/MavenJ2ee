@@ -82,4 +82,22 @@
     <servlet-name>SubmitServlet</servlet-name>
     <url-pattern>/submitServlet</url-pattern>
   </servlet-mapping>
+
+  <servlet>
+    <servlet-name>GetOneServlet</servlet-name>
+    <servlet-class>GetOneServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetOneServlet</servlet-name>
+    <url-pattern>/getOneServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>GetManyServlet</servlet-name>
+    <servlet-class>GetManyServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetManyServlet</servlet-name>
+    <url-pattern>/getManyServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
