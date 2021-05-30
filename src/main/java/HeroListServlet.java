@@ -12,13 +12,13 @@ public class HeroListServlet extends HttpServlet
 {
     protected void service(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException,NumberFormatException {
-        //加上Session判断，若用户登录超过20分钟，则无法直接查询，跳转到登录
-        String uerName=(String)request.getSession().getAttribute("userName");
-        if(uerName==null)
-        {
-            response.sendRedirect("login.html");
-            return;
-        }
+//        //加上Session判断，若用户登录超过20分钟，则无法直接查询，跳转到登录
+//        String uerName=(String)request.getSession().getAttribute("userName");
+//        if(uerName==null)
+//        {
+//            response.sendRedirect("login.html");
+//            return;
+//        }
         int start=0;
         int count=5;
         try {
