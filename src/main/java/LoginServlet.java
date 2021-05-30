@@ -15,6 +15,7 @@ public class LoginServlet extends HttpServlet
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
     {
+
         resp.setContentType("UTF-8");//设置返回的格式
         String html = null;
         req.setCharacterEncoding("UTF-8");
@@ -38,11 +39,19 @@ public class LoginServlet extends HttpServlet
         }
         //resp.setContentType("text/lol");
         if ("admin".equals(name) && "123".equals(password))
+        {
+            //如果密码正确，将数据存入Session
+            req.getSession().setAttribute("userName",name);
             req.getRequestDispatcher("success.html").forward(req,resp);
             //html = "<div style='color:green'>success</div>";
+        }
+
         else
+        {
             resp.sendRedirect("failed.html");
             //html = "<div style='color:red'>failed</div>";
+        }
+
 //        PrintWriter pw = resp.getWriter();
 //        pw.println(html);
     }

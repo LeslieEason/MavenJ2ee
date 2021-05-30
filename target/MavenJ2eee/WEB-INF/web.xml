@@ -100,4 +100,13 @@
     <servlet-name>GetManyServlet</servlet-name>
     <url-pattern>/getManyServlet</url-pattern>
   </servlet-mapping>
+
+  <servlet>
+    <servlet-name>HelloEditServletPlus</servlet-name>
+    <servlet-class>HelloEditServletPlus</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelloEditServletPlus</servlet-name>
+    <url-pattern>/helloEditServletPlus</url-pattern>
+  </servlet-mapping>
 </web-app>
